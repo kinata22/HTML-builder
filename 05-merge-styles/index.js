@@ -28,7 +28,7 @@ async function readStylesDirectory(stylesPath, bundlePath) {
 
   var file = fs.createWriteStream(bundlePath);
   file.on('error', function(err) { console.log(err) });
-  styles.forEach(value => file.write(`${value}`));
+  styles.forEach(value => file.write(`${value}\n`));
   file.end();
 }
 
